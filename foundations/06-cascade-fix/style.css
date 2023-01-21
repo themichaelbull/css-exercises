@@ -8,6 +8,62 @@ body{
   font-weight: 800;
 }
 
+.para {
+  font-size: 22px;
+}
+
+/* I moved .small-para to below .para so that .small-para took
+priority over the other. As they both have the same level of priority
+it defaults to the last present in the CSS file. */
+
+.small-para {
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.button {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+
+/*Did the same change as above, I moved .confirm to below .button, as they
+both have the same level of priority, it goes by which is last in the CSS file.*/
+
+.confirm {
+  background: green;
+  color: white;
+  font-weight: bold;
+} 
+
+div.text {
+  color: rgb(0, 0, 0);
+  font-size: 22px;
+  font-weight: 100;
+}
+
+/* I changed the selector so it now chained the div on top of the .child class.
+Now it has the same priority as above, so then I moved it below so it became the last to be read
+therefore it is set. */
+
+div.child {
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  font-size: 14px;
+}
+
+/* Backed up original file 
+
+body{
+  font-family:Arial, Helvetica, sans-serif
+}
+
+.para,
+.small-para {
+  color: hsl(0, 0%, 0%);
+  font-weight: 800;
+}
+
 .small-para {
   font-size: 14px;
   font-weight: 800;
@@ -40,3 +96,4 @@ div.text {
   font-size: 22px;
   font-weight: 100;
 }
+*/
